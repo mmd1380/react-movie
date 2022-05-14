@@ -1,0 +1,51 @@
+.movie-item-image img {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .movie-item-info-list .key {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .movie-item-info-list .value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .movie-item-info-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 15px;
+  }
+  .movie-item-card {
+    width: 100%;
+    display: flex;
+  }
+  .movie-item-image {
+    position: relative;
+    flex: .4;
+  }
+  .movie-item-info {
+    flex: .6;
+    padding-left: 20px;
+  }
+  .movie-item-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 53px;
+  }
+  .movie-item-credit {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .movie-item-credit-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 80px;
+    margin-bottom: 12px;
+  }

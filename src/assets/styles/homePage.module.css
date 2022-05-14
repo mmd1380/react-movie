@@ -1,0 +1,40 @@
+.movie-container {
+    width: 100%;
+    display: grid;
+    column-gap: 67px;
+    row-gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home-header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  .pagination {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .items-conter {
+    text-align: center
+  }
+  .link {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .no-data {
+    text-align: center;
+  }

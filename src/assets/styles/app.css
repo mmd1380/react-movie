@@ -1,0 +1,40 @@
+@import url('http://fonts.cdnfonts.com/css/roboto');
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html {
+  font-family: Roboto, Verdana;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #565656;
+}
+
+a:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.react-daterange-picker.react-daterange-picker--closed.react-daterange-picker--enabled {
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  border-radius: 6px;
+}
+
+.react-daterange-picker__wrapper {
+  border: none;
+  border-radius: 6px;
+}
+
+.react-daterange-picker__calendar.react-daterange-picker__calendar--open {
+  z-index: 998
+}
