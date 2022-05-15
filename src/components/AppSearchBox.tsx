@@ -25,4 +25,4 @@ const AppSearchBox = (props: IProps) => {
   )
 }
 
-export default AppSearchBox;
+export default React.memo(AppSearchBox);
