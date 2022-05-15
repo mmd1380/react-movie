@@ -8,7 +8,23 @@ import { useParams, NavLink } from 'react-router-dom';
 import { fetchMovieById } from "../../apis/movie";
 
 const MoviePage = () => {
-  const [movie, setMovie]: any = useState({});
+  const [movie, setMovie] = useState<IMovie>({
+    id: 0,
+    title: "",
+    tagline: "",
+    backdrop_path: "",
+    vote_count: 0,
+    vote_average: 0,
+    revenue: 0,
+    runtime: 0,
+    release_date: "",
+    poster_path: "",
+    popularity: 0,
+    overview: "",
+    imdb_id: "",
+    budget: 0,
+    genres: []
+  });
   const { id } = useParams();
 
   useEffect(() => {
@@ -19,9 +35,7 @@ const MoviePage = () => {
     const { data } = await fetchMovieById(Number(id));
     setMovie(data);
   }
-
-  if(!movie) return <div></div>
-
+  
   return (
     <>
       <AppHeader>
