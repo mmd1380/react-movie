@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { IGenre } from '../model/movie'
 import IMovieList from '../model/movieList'
 import AppLoading from "./common/AppLoading"
@@ -16,9 +16,9 @@ const AppMovieCard = (props: IProps) => {
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const getGenres = () => {
+  const getGenres = useMemo(() => {
     return props.genres.filter(gen => props.movie.genre_ids.includes(gen.id)).map(gen => gen.name).join(", ")
-  }
+  }, [props.genres])
 
   useEffect(() => {
     fetchImagesHandler(props.movie);
@@ -44,7 +44,7 @@ const AppMovieCard = (props: IProps) => {
         <div className={classes['movie-card-info']}>
           <h1 className={classes.title}>{ props.movie.title }</h1>
           <div className={classes.date}>{ props.movie.release_date }</div>
-          <div className={classes.genres}>{ getGenres() }</div>
+          <div className={classes.genres}>{ getGenres }</div>
         </div>
       </div>
     </NavLink>
